@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor // create a constructor that takes all the private fields as arguments
 @NoArgsConstructor // another constructor that takes no arguments
 public class Movie {
-    @Id // let the framework no that this property should be treated as the unique identifier for each movie inside the database
+    @Id // let the framework know that this property should be treated as the unique identifier for each movie inside the database
     private ObjectId id;
     private String imdbId;
     private String title;
@@ -23,5 +24,6 @@ public class Movie {
     private String poster;
     private List<String> genres;
     private List<String> backdrops;
-
+    @DocumentReference // manual reference relationship: causes the database to store only the IDs of the reviews, and the reviews will be in a separate collection
+    private List<Review> reviewIds;
 }
