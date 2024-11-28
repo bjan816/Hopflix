@@ -20,8 +20,8 @@ public class ReviewService {
 
         mongoTemplate.update(Movie.class) // Associate the review with one of the movies. Update the reviewIds array of the movie in the collection
                 .matching(Criteria.where("imdbId").is(imdbId)) // updating the movie where the imdbId of the movie in the db matches imdbId we received from the user
-                .apply(new Update().push("reviewIds").value(review)) // Update definition makes the change inside the database. We update the reviewIds of the matching movie. The review we have just created will be pushed into the reviewIds array?
-                .first(); // make sure that we are getting a single movie and are updating that
+                .apply(new Update().push("reviewIds").value(review)) // Update definition makes the change inside the database. We update the reviewIds of the matching movie. The review we have just created will be pushed into the reviewIds array(?)
+                .first(); // Executes the update operation and ensures only the first matching document is updated (even if multiple movies with the same imdbId exist)
 
         return review;
     }
