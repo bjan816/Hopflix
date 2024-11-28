@@ -19,9 +19,9 @@ public class ReviewService {
         Review review = reviewRepository.insert(new Review(reviewBody)); // insert() returns the data that has been pushed inside the database
 
         mongoTemplate.update(Movie.class) // Associate the review with one of the movies. Update the reviewIds array of the movie in the collection
-                .matching(Criteria.where("imdbId").is(imdbId))
-                .apply(new Update().push("reviewIds").value(review)) // Update definition makes the change inside the database
-                .first();
+                .matching(Criteria.where("imdbId").is(imdbId)) // updating the movie where the imdbId of the movie in the db matches imdbId we received from the user
+                .apply(new Update().push("reviewIds").value(review)) // Update definition makes the change inside the database. We update the reviewIds of the matching movie. The review we have just created will be pushed into the reviewIds array?
+                .first(); // make sure that we are getting a single movie and are updating that
 
         return review;
     }
