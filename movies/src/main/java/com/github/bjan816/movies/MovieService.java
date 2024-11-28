@@ -17,8 +17,8 @@ public class MovieService { // this class includes the database access methods
         return movieRepository.findAll(); // return a list of the data type (Movie)
     }
 
-    public Optional<Movie> singleMovie(ObjectId id) {
+    public Optional<Movie> singleMovie(String imdbId) {
         // The findById method may not find a movie if the id passed doesn't exist. To handle such cases, let Java know it may return null by using Optional.
-        return movieRepository.findById(id);
+        return movieRepository.findMovieByImdbId(imdbId);
     }
 }
