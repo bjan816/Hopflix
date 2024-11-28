@@ -16,4 +16,7 @@ public class Review {
     private ObjectId id;
     private String body;
 
+    public Review(String body) { // Since ids are auto-generated, we cannot pass an id to this class. So we will generate a custom constructor that takes only the body, on top of the AllArgs/NoArgsConstructor.
+        this.body = body;
+    }
 }
