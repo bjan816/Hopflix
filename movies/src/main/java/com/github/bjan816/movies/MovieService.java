@@ -1,9 +1,11 @@
 package com.github.bjan816.movies;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MovieService { // this class includes the database access methods
@@ -13,5 +15,10 @@ public class MovieService { // this class includes the database access methods
 
     public List<Movie> allMovies() {
         return movieRepository.findAll(); // return a list of the data type (Movie)
+    }
+
+    public Optional<Movie> singleMovie(ObjectId id) {
+        // The findById method may not find a movie if the id passed doesn't exist. To handle such cases, let Java know it may return null by using Optional.
+        return movieRepository.findById(id);
     }
 }
