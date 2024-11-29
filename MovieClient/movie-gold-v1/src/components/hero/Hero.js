@@ -7,7 +7,7 @@ const Hero = ({movies}) => {
     <div className='movie-carousel-container'>
         <Carousel>
             {
-                movies?.map((movie) => {
+                movies?.map((movie) => { // The optional chaining operator (?.) checks if movies is not null or undefined before calling .map() on it
                     return(
                         <Paper>
                             <div className='movie-card-container'>
