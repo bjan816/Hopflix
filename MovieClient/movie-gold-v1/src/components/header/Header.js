@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
 
-const header = () => {
+const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
@@ -32,4 +32,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
