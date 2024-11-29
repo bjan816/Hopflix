@@ -30,12 +30,12 @@ function App() {
   return (
     <div className="App">
       
-      <Route>
+      <Routes>
         <Route path='/' element={<Layout />}>
           <Route path='/' element={<Home />}>
           </Route>
         </Route>
-      </Route>
+      </Routes>
 
     </div>
   );
