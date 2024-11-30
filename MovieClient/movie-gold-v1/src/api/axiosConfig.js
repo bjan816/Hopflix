@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default axios.create({
     baseURL: "https://hopflix.onrender.com", // Replace ngrok URL with localhost
-    timeout: 20000, // Optional: set a timeout for requests
+    // timeout: 20000,
     headers: { "Content-Type": "application/json" } // Define the content type for requests
 });
 
