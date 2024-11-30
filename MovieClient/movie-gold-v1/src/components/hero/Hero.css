@@ -59,7 +59,7 @@
 .play-button-icon {
     padding: 0px;
     margin: 0px;
-    color: #ff6347;
+    color: #ff5112;
     font-size: 3.5rem;
     transition: 0.3s;
     cursor: pointer;
@@ -67,15 +67,15 @@
 
 .play-button-icon:hover {
     transform: scale(1.25);
-    color: #ff4500;
+    color: #ff7f50;
 }
 
 .custom-review-button {
     background: linear-gradient(
         92.23deg,
-        #ff6347 21.43%, /* Tomato Red */
-        #ff4500 50.63%, /* Deep Orange-Red */
-        #ff7f50 100% /* Coral Orange */
+        #ff4500 21.43%, /* Deep Orange-Red */
+        #ff8c00 50.63%, /* Dark Orange */
+        #ffa07a 100% /* Light Salmon */
     ) !important;
     color: white !important;
     font-size: 1.3rem !important;
@@ -88,13 +88,12 @@
 .custom-review-button:hover {
     background: linear-gradient(
         92.23deg,
-        #ff7f50 21.43%, /* Coral Orange */
-        #ff4500 50.63%, /* Deep Orange-Red */
-        #ff6347 100% /* Tomato Red */
+        #ffa07a 21.43%, /* Light Salmon */
+        #ff8c00 50.63%, /* Dark Orange */
+        #ff4500 100% /* Deep Orange-Red */
     ) !important;
     transform: scale(1.15);
 }
-
 
 @media only screen and (max-width: 800px) {
     .movie-detail {
