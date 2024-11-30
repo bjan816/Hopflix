@@ -4,9 +4,9 @@
 }
 
 .movie-poster{
-    height: 350px;
-    border: 1px solid darkgoldenrod;
-    border-radius: 10px;
+    height: 400px;
+    border: 2px solid darkgoldenrod;
+    border-radius: 15px;
     overflow: hidden;
 }
 
