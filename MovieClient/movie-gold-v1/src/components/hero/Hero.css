@@ -31,7 +31,7 @@
 
 .movie-detail {
     position: absolute;
-    top: 300px;
+    top: 250px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
