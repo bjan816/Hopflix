@@ -1,8 +1,12 @@
+# Stage 1: Build the application
 FROM maven:3.8.8-eclipse-temurin-21-alpine AS build
+WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
+# Stage 2: Run the application
 FROM eclipse-temurin:21-jdk
-COPY --from=build /target/movies-0.0.1-SNAPSHOT.jar movies.jar
+WORKDIR /app
+COPY --from=build /app/target/movies-0.0.1-SNAPSHOT.jar movies.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "movies.jar"]
