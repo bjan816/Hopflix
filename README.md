@@ -4,5 +4,3 @@ Users can explore a collection of movies, view trailers, and leave reviews to sh
 
 ## Preview
 ![Hopflix Screenshot](./images/Hopflix.png)
-
-A preview of the Hopflix homepage.
