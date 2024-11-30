@@ -73,9 +73,9 @@
 .custom-review-button {
     background: linear-gradient(
         92.23deg,
-        #ff7f50 21.43%, /* Coral Orange */
+        #ff6347 21.43%, /* Tomato Red */
         #fc4a0a 50.63%, /* Deep Orange-Red */
-        #ff6347 100% /* Tomato Red */
+        #ff7f50 100% /* Coral Orange */
     ) !important;
     color: white !important;
     font-size: 1.3rem !important;
@@ -88,9 +88,9 @@
 .custom-review-button:hover {
     background: linear-gradient(
         92.23deg,
-        #ff6347 21.43%, /* Tomato Red */
+        #ff7f50 21.43%, /* Coral Orange */
         #fc4a0a 50.63%, /* Deep Orange-Red */
-        #ff7f50 100% /* Coral Orange */
+        #ff6347 100% /* Tomato Red */
     ) !important;
     transform: scale(1.15);
 }
