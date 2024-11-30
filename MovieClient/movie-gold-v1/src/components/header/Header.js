@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-            <Navbar.Brand href="/" style={{"color": 'gold'}}>
+            <Navbar.Brand href="/" style={{"color": '#ff7f50'}}>
                 🐇 Hopflix
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />

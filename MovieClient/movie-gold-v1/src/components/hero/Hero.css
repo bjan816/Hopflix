@@ -5,7 +5,7 @@
 
 .movie-poster{
     height: 400px;
-    border: 2px solid darkgoldenrod;
+    border: 1px solid #ff7f50;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -59,7 +59,7 @@
 .play-button-icon {
     padding: 0px;
     margin: 0px;
-    color: gold;
+    color: #ff6347;
     font-size: 3.5rem;
     transition: 0.3s;
     cursor: pointer;
@@ -67,23 +67,34 @@
 
 .play-button-icon:hover {
     transform: scale(1.25);
-    color: darkgoldenrod;
+    color: #ff4500;
 }
 
 .custom-review-button {
-    background-color: gold !important;
-    border: gold !important;
-    color: #121212 !important;
+    background: linear-gradient(
+        92.23deg,
+        #ff6347 21.43%, /* Tomato Red */
+        #ff4500 50.63%, /* Deep Orange-Red */
+        #ff7f50 100% /* Coral Orange */
+    ) !important;
+    color: white !important;
     font-size: 1.3rem !important;
+    border: none !important;
     border-radius: 30px !important;
     padding: 0.5em 1.4rem !important;
     transition: 0.3s !important;
 }
 
 .custom-review-button:hover {
-    background-color: darkgoldenrod !important;
+    background: linear-gradient(
+        92.23deg,
+        #ff7f50 21.43%, /* Coral Orange */
+        #ff4500 50.63%, /* Deep Orange-Red */
+        #ff6347 100% /* Tomato Red */
+    ) !important;
     transform: scale(1.15);
 }
+
 
 @media only screen and (max-width: 800px) {
     .movie-detail {
